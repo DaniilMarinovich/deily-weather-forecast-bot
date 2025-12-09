@@ -30,8 +30,8 @@ export function getForecast(data: any): string {
   return (
     `Прогноз погоды в Гомеле на сегодня(${today.getDate()}.${today.getMonth()}):\n` +
     formatForecast(filterForecast(data, today)) +
-    "\n" +
-    `Прогноз погоды в Гомеле назавтра(${tomorrow.getDate()}.${tomorrow.getMonth()}):\n` +
+    "\n\n" +
+    `Прогноз погоды в Гомеле на завтра(${tomorrow.getDate()}.${tomorrow.getMonth()}):\n` +
     formatForecast(filterForecast(data, tomorrow))
   );
 }
