@@ -1,6 +1,6 @@
 function checkToday(day: Date): boolean {
   const today = new Date();
-  return today.getDate() === day.getDate();
+  return today.getDate() === day.getDate() || today.getDate() + 1 === day.getDate();
 }
 
 function filterTodayForecast(data: any) {
@@ -26,8 +26,10 @@ function formatForecast(todayForecasts: any): string {
 
 export function getForecast(data: any): string {
   const today = new Date();
+  const tomorrow = new Date(today);
+  tomorrow.setDate(today.getDate() + 1);
   return (
-    `Прогноз погоды в Гомеле на сегодня(${today.getDate()}.${today.getMonth()}):\n` +
+    `Прогноз погоды в Гомеле на сегодня(${today.getDate()}.${today.getMonth()}}) и завтра(${tomorrow.getDate()}.${tomorrow.getMonth()}}):\n` +
     formatForecast(filterTodayForecast(data))
   );
 }
