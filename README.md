@@ -56,7 +56,7 @@ npm start
 ```
 
 ### 📂 Project Structure
-`
+```
 ├── src/
 │   ├── index.ts       # Entry point
 │   ├── models/        # Mongoose schemas (User, etc.)
@@ -65,7 +65,7 @@ npm start
 ├── .env               # Environment variables
 ├── package.json       # Dependencies and scripts
 └── tsconfig.json      # TypeScript configuration
-`
+```
 ### 📝 License
 
 This project is licensed under the MIT License.
